@@ -40,6 +40,12 @@ Az alkalmazás lehetőséget biztosít céges vélemények rögzítésére, megj
 
 # Telepítés
 
+## Git letöltés
+
+```bash
+git@github.com:gergosteinerbrunner-lgtm/trust.git
+```
+
 ## Függőségek telepítése
 
 ```bash
