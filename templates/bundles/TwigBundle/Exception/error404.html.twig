@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}404 - Az oldal nem található{% endblock %}
+
+{% block body %}
+
+<div class="container py-5">
+
+    <div class="text-center">
+
+        <i class="bi bi-exclamation-triangle-fill text-warning"
+           style="font-size: 6rem;"></i>
+
+        <h1 class="display-4 fw-bold mt-4">
+            404
+        </h1>
+
+        <h3 class="mb-3">
+            A keresett oldal nem található.
+        </h3>
+
+        <p class="text-muted mb-4">
+            Lehetséges, hogy a keresett vélemény már nem létezik,
+            vagy hibás hivatkozást nyitottál meg.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+
+            <a href="{{ path('home') }}"
+               class="btn btn-warning">
+
+                <i class="bi bi-house"></i>
+
+                Főoldal
+
+            </a>
+
+            <a href="{{ path('review_index') }}"
+               class="btn btn-outline-primary">
+
+                <i class="bi bi-chat-square-text"></i>
+
+                Vélemények
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+body{
+    background:#f8f9fa;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+.rating{
+    color:#ffc107;
+    font-size:18px;
+}
+
+.hero{
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:40px;
+
+}

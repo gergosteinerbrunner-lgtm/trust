@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Új vélemény | TrustIndex{% endblock %}
+
+{% block body %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow-sm">
+
+            <div class="card-body p-5">
+
+                <h1 class="text-center mb-4">
+
+                    <i class="bi bi-chat-square-text"></i>
+
+                    Új vélemény írása
+
+                </h1>
+
+                {{ form_start(form) }}
+
+                    <div class="mb-3">
+
+                        {{ form_label(form.companyName) }}
+
+                        {{ form_widget(form.companyName, {
+                            attr: {
+                                class: form.companyName.vars.errors|length
+                                    ? 'form-control is-invalid'
+                                    : 'form-control'
+                            }
+                        }) }}
+
+                        <div class="invalid-feedback d-block">
+                            {% for error in form.companyName.vars.errors %}
+                                {{ error.message }}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        {{ form_label(form.rating) }}
+
+                        {{ form_widget(form.rating, {
+                            attr: {
+                                class: form.rating.vars.errors|length
+                                    ? 'form-select is-invalid'
+                                    : 'form-select'
+                            }
+                        }) }}
+
+                        <div class="invalid-feedback d-block">
+                            {% for error in form.rating.vars.errors %}
+                                {{ error.message }}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        {{ form_label(form.reviewText) }}
+
+                        {{ form_widget(form.reviewText, {
+                            attr: {
+                                class: form.reviewText.vars.errors|length
+                                    ? 'form-control is-invalid'
+                                    : 'form-control'
+                            }
+                        }) }}
+
+                        <div class="invalid-feedback d-block">
+                            {% for error in form.reviewText.vars.errors %}
+                                {{ error.message }}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        {{ form_label(form.authorEmail) }}
+
+                        {{ form_widget(form.authorEmail, {
+                            attr: {
+                                class: form.authorEmail.vars.errors|length
+                                    ? 'form-control is-invalid'
+                                    : 'form-control'
+                            }
+                        }) }}
+
+                        <div class="invalid-feedback d-block">
+                            {% for error in form.authorEmail.vars.errors %}
+                                {{ error.message }}
+                            {% endfor %}
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+
+                        <a
+                            href="{{ path('review_index') }}"
+                            class="btn btn-secondary">
+
+                            <i class="bi bi-arrow-left"></i>
+
+                            Vissza
+
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn btn-warning">
+
+                            <i class="bi bi-check-circle"></i>
+
+                            Vélemény beküldése
+
+                        </button>
+
+                    </div>
+
+                    {{ form_end(form) }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
