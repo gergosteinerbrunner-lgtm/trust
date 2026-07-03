@@ -161,7 +161,7 @@ A kötelező feladatokon felül az alábbi funkciók kerültek megvalósításra
 
 A projekt célja egy letisztult, Symfony ajánlásait követő megoldás készítése volt, amely jól elkülöníti az üzleti logikát, a megjelenítést és az adatkezelést, valamint bemutatja a modern Symfony komponensek (Forms, Doctrine, Twig, PHPUnit) használatát.
 
-## Jövőbeni fejlesztési ötletek
+# Jövőbeni fejlesztési ötletek
 
 A projekt a feladatkiírásnak megfelelően készült el, ugyanakkor számos irányban továbbfejleszthető.
 
